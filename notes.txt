@@ -1,0 +1,18 @@
+
+1 .- Es necesario crear un Schema de una nueva coleccion 
+    utilizando Schema y model de la biblioteca de mongoose,
+
+2 .- 
+
+
+
+
+
+En una funcion callback 
+
+  custom(  (role) => { roleValidation( role ) } )
+
+se puede obviar la expresion de la siguiente manera:
+
+custom (  roleValidation  )
+
