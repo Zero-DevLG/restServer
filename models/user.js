@@ -2,6 +2,7 @@
 const { Schema, model } = require('mongoose');
 
 const UserSchema = Schema({
+  
     name:{
         type:       String,
         required:   [ true, 'El nombre es obligatorio']
@@ -36,7 +37,8 @@ const UserSchema = Schema({
 //Dentro del modelo podemos crear metodos para editar los datos del objeto
 
 UserSchema.methods.toJSON = function(){
-   const  { __v, password, ...user } = this.toObject();
+   const  { __v, password, _id, ...user } = this.toObject();
+   user.uid = _id;
    return user;
 }
 
